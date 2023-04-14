@@ -8,7 +8,7 @@ import { IconButton } from "./button";
 import styles from "./home.module.scss";
 
 import SettingsIcon from "../icons/settings.svg";
-import GithubIcon from "../icons/github.svg";
+
 import ChatGptIcon from "../icons/chatgpt.svg";
 
 import BotIcon from "../icons/bot.svg";
@@ -167,9 +167,9 @@ function _Home() {
         className={styles.sidebar + ` ${showSideBar && styles["sidebar-show"]}`}
       >
         <div className={styles["sidebar-header"]}>
-          <div className={styles["sidebar-title"]}>ChatGPT Next</div>
+          <div className={styles["sidebar-title"]}>字节悦动（内部专用）</div>
           <div className={styles["sidebar-sub-title"]}>
-            Build your own AI assistant.
+            ChatGPT Next
           </div>
           <div className={styles["sidebar-logo"]}>
             <ChatGptIcon />
@@ -194,6 +194,7 @@ function _Home() {
                 onClick={chatStore.deleteSession}
               />
             </div>
+            
             <div className={styles["sidebar-action"]}>
               <IconButton
                 icon={<SettingsIcon />}
@@ -204,12 +205,11 @@ function _Home() {
                 shadow
               />
             </div>
-            <div className={styles["sidebar-action"]}>
-              <a href={REPO_URL} target="_blank">
-                <IconButton icon={<GithubIcon />} shadow />
-              </a>
-            </div>
+            
+          
+           
           </div>
+        
           <div>
             <IconButton
               icon={<AddIcon />}

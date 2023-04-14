@@ -196,6 +196,7 @@ export function Settings(props: { closeSettings: () => void }) {
           </div>
         </div>
       </div>
+      {/* settings */}
       <div className={styles["settings"]}>
         <List>
           <SettingItem title={Locale.Settings.Avatar}>
@@ -222,8 +223,8 @@ export function Settings(props: { closeSettings: () => void }) {
               </div>
             </Popover>
           </SettingItem>
-
-          <SettingItem
+      {/* 版本更新  
+        <SettingItem
             title={Locale.Settings.Update.Version(currentVersion ?? "unknown")}
             subTitle={
               checkingUpdate
@@ -247,6 +248,7 @@ export function Settings(props: { closeSettings: () => void }) {
               />
             )}
           </SettingItem>
+         */}
 
           <SettingItem title={Locale.Settings.SendKey}>
             <select
@@ -364,7 +366,7 @@ export function Settings(props: { closeSettings: () => void }) {
           ) : (
             <></>
           )}
-
+{/* 访问密码 
           <SettingItem
             title={Locale.Settings.Token.Title}
             subTitle={Locale.Settings.Token.SubTitle}
@@ -402,7 +404,7 @@ export function Settings(props: { closeSettings: () => void }) {
               />
             )}
           </SettingItem>
-
+  */}
           <SettingItem
             title={Locale.Settings.HistoryCount.Title}
             subTitle={Locale.Settings.HistoryCount.SubTitle}

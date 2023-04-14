@@ -167,7 +167,7 @@ function _Home() {
         className={styles.sidebar + ` ${showSideBar && styles["sidebar-show"]}`}
       >
         <div className={styles["sidebar-header"]}>
-          <div className={styles["sidebar-title"]}>字节悦动（内部专用）</div>
+          <div className={styles["sidebar-title"]}>字节悦动</div>
           <div className={styles["sidebar-sub-title"]}>
             ChatGPT Next
           </div>

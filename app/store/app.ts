@@ -98,29 +98,6 @@ export const ALL_MODELS = [
   },
 ];
 
-export const ALL_Token = [
-  {
-    name: "线路1",
-    key: "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",
-  },
-  {
-    name: "线路2",
-    key: "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",
-  },
-  {
-    name: "线路3",
-    key: "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",
-  },
-  {
-    name: "线路4",
-    key: "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",
-  },
-  {
-    name: "线路5",
-    key: "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",
-  },
-];
-
 export function limitNumber(
   x: number,
   min: number,

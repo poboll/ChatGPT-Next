@@ -19,6 +19,7 @@ import {
   useChatStore,
   Theme,
   ALL_MODELS,
+  ALL_Token,
   useUpdateStore,
   useAccessStore,
   ModalConfigValidator,
@@ -366,11 +367,12 @@ export function Settings(props: { closeSettings: () => void }) {
           ) : (
             <></>
           )}
-{/* 访问密码 
+{/* 访问密码 */}
           <SettingItem
             title={Locale.Settings.Token.Title}
             subTitle={Locale.Settings.Token.SubTitle}
           >
+     {/*
             <PasswordInput
               value={accessStore.token}
               type="text"
@@ -379,6 +381,21 @@ export function Settings(props: { closeSettings: () => void }) {
                 accessStore.updateToken(e.currentTarget.value);
               }}
             />
+           */}
+           
+            <select
+              value={accessStore.token}
+              onChange={(e) => {
+                accessStore.updateToken(e.currentTarget.value);
+              }}
+            >
+              {ALL_Token.map((v) => (
+                <option value={v.key} key={v.key}>
+                  {v.name}
+                </option>
+              ))}
+            </select>
+           
           </SettingItem>
 
           <SettingItem
@@ -404,7 +421,7 @@ export function Settings(props: { closeSettings: () => void }) {
               />
             )}
           </SettingItem>
-  */}
+  
           <SettingItem
             title={Locale.Settings.HistoryCount.Title}
             subTitle={Locale.Settings.HistoryCount.SubTitle}
